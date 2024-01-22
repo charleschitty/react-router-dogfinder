@@ -21,18 +21,16 @@ function DogDetails({ dog = testDog }) {
   return (
     <div>
       <h2>Name: {dog.name}</h2>
-        <li>
-          <p> Age: {dog.age} </p>
-          <p> Facts: </p>
-          <ul>
-          {dog.facts.map((fact, i) => (
-            <li key={i}>
-              {fact}
-            </li>
-          ))}
-          </ul>
-          <img src={`/${dog.src}.jpg`} alt={dog.name}/>
-        </li>
+      <p> Age: {dog.age} </p>
+      <p> Facts: </p>
+      <ul>
+        {dog.facts.map((fact, i) => (
+          <li key={i}>
+            {fact}
+          </li>
+        ))}
+      </ul>
+      <img src={`/${dog.src}.jpg`} alt={dog.name} />
     </div>
   );
 }
