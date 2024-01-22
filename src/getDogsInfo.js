@@ -9,4 +9,6 @@ async function getDogsInfo() {
   const data = await response.json();
 
   return data;
-}
+};
+
+export { getDogsInfo };
