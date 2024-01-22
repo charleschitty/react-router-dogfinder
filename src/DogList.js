@@ -4,7 +4,7 @@ import "./DogList.css";
 
 /** Basic Navigation Bar component that redirects to
  *
- * Props: defaultDogs *****TODO:
+ * Props: dogs *****TODO:
  * State: None
  *
  * { App } -->
@@ -20,14 +20,7 @@ const defaultDogs = ["whiskey", "duke", "perry"];
 function DogList( dogs = defaultDogs) {
   return (
     <div className='DogList'>
-      <ul>
-        {dogs.map(dog => (
-          <li key={dog.id}>
-            <Link to={`/dogs/${dog.src}`}> {dog.name} </Link>
-          </li>
-        ))}
-      </ul>
-      <h1> HELLO </h1>
+      <h1>Hello from DogList</h1>
     </div>
   );
 }
