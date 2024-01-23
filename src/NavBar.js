@@ -7,12 +7,12 @@ import "./NavBar.css";
  *
  * App -> NavBar
  */
-function NavBar({dogs = ["Duke", "Whiskey", "Perry"]}) {
-  console.log("NavBar rendered with: ", dogs)
+function NavBar({ dogs }) {
+  console.log("NavBar rendered with: ", dogs);
   return (
     <div className='NavBar'>
       <ul>
-        <li><Link to="/" />Home</li>
+        <li><Link to="/dogs">Home</Link></li>
         {dogs.map(dog => (
           <li key={dog}>
             <Link to={`/dogs/${dog.toLowerCase()}`}> {dog} </Link>
