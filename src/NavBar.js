@@ -12,14 +12,10 @@ function NavBar({ dogs }) {
 
   return (
     <div className='NavBar'>
-      <ul>
-        <li><Link to="/dogs">Home</Link></li>
-        {dogs.map(dog => (
-          <li key={dog}>
-            <Link to={`/dogs/${dog.toLowerCase()}`}> {dog} </Link>
-          </li>
-        ))}
-      </ul>
+      <Link to="/dogs">Home</Link>
+      {dogs.map(dog => (
+        <Link key={dog} to={`/dogs/${dog.toLowerCase()}`}> {dog} </Link>
+      ))}
     </div>
   );
 }
