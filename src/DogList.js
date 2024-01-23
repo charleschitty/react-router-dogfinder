@@ -11,11 +11,11 @@ import { getDogsInfo } from './getDogsInfo';
  * { App } -->
 */
 
-const dogsData = await getDogsInfo();
 // Get request to localhost:5001/dogs to get dogs object
 // {name, age, facts, src, id}
 
-function DogList( {dogs = dogsData} ) {
+function DogList( {dogs} ) {
+  console.log("In DogList, dogs is", dogs);
   return (
     <div className='DogList'>
       <h1> Dogs: </h1>
@@ -23,7 +23,7 @@ function DogList( {dogs = dogsData} ) {
           {dogs.map(dog => (
             <li key={dog.id}>
               <Link to={`/dogs/${dog.name.toLowerCase()}`}>
-                Name: {dog.name}
+                {dog.name}
               </Link>
               <img src={`/${dog.src}.jpg`} alt={dog.name}/>
             </li>

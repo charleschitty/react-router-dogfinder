@@ -9,17 +9,6 @@ import { useParams } from "react-router-dom";
  *
  * App -> DogDetailsCatcher -> DogDetails
  */
-const testDog = {
-  "name": "Perry",
-  "age": 4,
-  "src": "perry",
-  "facts": [
-    "Perry loves all humans.",
-    "Perry demolishes all snacks.",
-    "Perry hates the rain."
-  ],
-  "id": "4aed"
-};
 
 function DogDetails({ dog }) {
   console.log("DOG", dog);

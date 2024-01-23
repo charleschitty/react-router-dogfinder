@@ -43,7 +43,7 @@ function App() {
     <BrowserRouter>
       <NavBar dogs={dogNames} />
       <Routes>
-        <Route element={<DogList />} path="/" />
+        <Route element={<DogList dog={dogs}/>} path="/" />
         <Route element={<DogDetailsCatcher dogs={dogs} />} path="/dogs/:name" />
         <Route element={<Navigate to="/dogs" />} path="/*" />
       </Routes>

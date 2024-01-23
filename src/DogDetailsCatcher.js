@@ -20,14 +20,12 @@ function DogDetailsCatcher({ dogs }) {
     const desiredDog = dogs.find((dog) => dog.name.toLowerCase() === name);
     console.log("desiredDog in DogDetailsCatcher", desiredDog);
     if (desiredDog === undefined) {
-      <Navigate to="/dogs" />;
+      return <Navigate to="/" />;
     }
     return (
       <DogDetails dog={desiredDog} />
     );
-  }
-
-  return null;
+  };
 }
 
 export default DogDetailsCatcher;
