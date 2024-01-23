@@ -1,9 +1,7 @@
-import { useParams } from "react-router-dom";
-
 /** Shows the details of a single Dog
  *
  * Props:
- * - dog: object - A dog object from the DB
+ * - dog: object - A dog object from the database
  *
  * State: None
  *
@@ -11,8 +9,8 @@ import { useParams } from "react-router-dom";
  */
 
 function DogDetails({ dog }) {
-  console.log("DOG", dog);
-  // const { name } = useParams();
+  console.log("DogDetails of", dog, "reached");
+
   return (
     <div>
       <h2>Name: {dog.name}</h2>

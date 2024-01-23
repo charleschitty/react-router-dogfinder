@@ -1,21 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./DogList.css";
-import { getDogsInfo } from './getDogsInfo';
 
-/** Basic Navigation Bar component that redirects to
+/** Basic Navigation Bar component with links to details of a dog
  *
- * Props: dogs object
+ * Props: dogs - array of dog objects
  * State: None
  *
- * { App } -->
+ * { App } --> DogList
 */
-
-// Get request to localhost:5001/dogs to get dogs object
-// {name, age, facts, src, id}
 
 function DogList( {dogs} ) {
   console.log("In DogList, dogs is", dogs);
+
   return (
     <div className='DogList'>
       <h1> Dogs: </h1>

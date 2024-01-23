@@ -8,8 +8,8 @@ import "./NavBar.css";
  * App -> NavBar
  */
 function NavBar({ dogs }) {
-  console.log("AT THE NAVBAR");
   console.log("NavBar rendered with: ", dogs);
+
   return (
     <div className='NavBar'>
       <ul>

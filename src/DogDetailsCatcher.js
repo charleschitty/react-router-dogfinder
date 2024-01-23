@@ -3,10 +3,11 @@ import { Navigate, useParams } from 'react-router-dom';
 import DogDetails from './DogDetails';
 
 /**
- * Handles the routing logic for rendering a DogDetail Comp
+ * Handles the routing logic for rendering a DogDetail Component
+ * If dog does not exist in database, redirects to /dogs
  *
- * Prop:
- * State:
+ * Prop: dogs - an array of dog objects
+ * State: None
  *
  * App -> DogDetailsCatcher -> DogDetails
  */
@@ -20,7 +21,7 @@ function DogDetailsCatcher({ dogs }) {
     const desiredDog = dogs.find((dog) => dog.name.toLowerCase() === name);
     console.log("desiredDog in DogDetailsCatcher", desiredDog);
     if (desiredDog === undefined) {
-      return <Navigate to="/" />;
+      return <Navigate to="/dogs" />;
     }
     return (
       <DogDetails dog={desiredDog} />
