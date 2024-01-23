@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./DogList.css";
 
-/** Basic Navigation Bar component with links to details of a dog
+/** Basic List component to list all the dogs with links to details of a dog
  *
  * Props: dogs - array of dog objects
  * State: None

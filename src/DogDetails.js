@@ -3,7 +3,7 @@ import "./DogDetails.css"
 /** Shows the details of a single Dog
  *
  * Props:
- * - dog: object - A dog object from the database
+ * - dog: object - A dog object
  *
  * State: None
  *

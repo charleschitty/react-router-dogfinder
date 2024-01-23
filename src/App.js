@@ -29,6 +29,9 @@ function App() {
     setDogs(data);
   };
 
+  // If nothing returned from API, length will always be 0
+  // may want to handle with a discreet state (isLoading/isEmpty) and check that instead
+
   // Without data in dogs, shows loading screen and sends fetch request
   if (dogs.length === 0) {
     getDogs();
@@ -45,7 +48,8 @@ function App() {
 
   return (
       <BrowserRouter>
-        <NavBar dogs={dogNames} />
+        {/* might be better to be explicit since dogs means one thing in NavBar and something different everywhere else */}
+        <NavBar dogNames={dogNames} />
         <Routes>
           <Route element={<DogList dogs={dogs}/>} path="/dogs" />
           <Route element={<DogDetailsCatcher dogs={dogs} />} path="/dogs/:name" />

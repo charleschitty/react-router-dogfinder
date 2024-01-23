@@ -4,7 +4,7 @@ import DogDetails from './DogDetails';
 
 /**
  * Handles the routing logic for rendering a DogDetail Component
- * If dog does not exist in database, redirects to /dogs
+ * If dog does not exist, redirects to /dogs
  *
  * Prop: dogs - an array of dog objects
  * State: None
