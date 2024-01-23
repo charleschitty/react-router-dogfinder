@@ -1,16 +1,33 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
+import DogDetails from './DogDetails';
 
-function DogDetailsCatcher() {
+/**
+ * Handles the routing logic for rendering a DogDetail Comp
+ *
+ * Prop:
+ * State:
+ *
+ * App -> DogDetailsCatcher -> DogDetails
+ */
+
+function DogDetailsCatcher({ dogs }) {
   const { name } = useParams();
 
-  if (name === undefined) {
-    <Navigate to="/dogs" />;
+  console.log("DogDetailsCatcher renders with", dogs, name);
+
+  if (name) {
+    const desiredDog = dogs.find((dog) => dog.name.toLowerCase() === name);
+    console.log("desiredDog in DogDetailsCatcher", desiredDog);
+    if (desiredDog === undefined) {
+      <Navigate to="/dogs" />;
+    }
+    return (
+      <DogDetails dog={desiredDog} />
+    );
   }
 
-  return (
-    <div>DogDetailsCatcher</div>
-  );
+  return null;
 }
 
 export default DogDetailsCatcher;

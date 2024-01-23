@@ -1,7 +1,13 @@
 import { useParams } from "react-router-dom";
 
-/** ...
+/** Shows the details of a single Dog
  *
+ * Props:
+ * - dog: object - A dog object from the DB
+ *
+ * State: None
+ *
+ * App -> DogDetailsCatcher -> DogDetails
  */
 const testDog = {
   "name": "Perry",
@@ -15,7 +21,7 @@ const testDog = {
   "id": "4aed"
 };
 
-function DogDetails({ dog = testDog }) {
+function DogDetails({ dog }) {
   console.log("DOG", dog);
   // const { name } = useParams();
   return (
