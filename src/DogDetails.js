@@ -1,3 +1,5 @@
+import "./DogDetails.css"
+
 /** Shows the details of a single Dog
  *
  * Props:
@@ -12,10 +14,10 @@ function DogDetails({ dog }) {
   console.log("DogDetails of", dog, "reached");
 
   return (
-    <div>
-      <h2>Name: {dog.name}</h2>
-      <p> Age: {dog.age} </p>
-      <p> Facts: </p>
+    <div className="DogDetails">
+      <h2>{dog.name}</h2>
+      <p> <b>Age:</b> {dog.age} </p>
+      <p> <b>Facts:</b> </p>
       <ul>
         {dog.facts.map((fact, i) => (
           <li key={i}>

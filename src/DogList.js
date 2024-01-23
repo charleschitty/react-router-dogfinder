@@ -10,22 +10,20 @@ import "./DogList.css";
  * { App } --> DogList
 */
 
-function DogList( {dogs} ) {
+function DogList({ dogs }) {
   console.log("In DogList, dogs is", dogs);
 
   return (
     <div className='DogList'>
       <h1> Dogs: </h1>
-        <ul>
-          {dogs.map(dog => (
-            <li key={dog.id}>
-              <Link to={`/dogs/${dog.name.toLowerCase()}`}>
-                {dog.name}
-              </Link>
-              <img src={`/${dog.src}.jpg`} alt={dog.name}/>
-            </li>
-          ))}
-        </ul>
+      {dogs.map(dog => (
+        <div>
+          <Link key={dog.id} to={`/dogs/${dog.name.toLowerCase()}`}>
+            {dog.name}
+          </Link>
+          <img src={`/${dog.src}.jpg`} alt={dog.name} />
+        </div>
+      ))}
     </div>
   );
 }
